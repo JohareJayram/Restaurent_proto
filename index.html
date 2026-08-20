@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verdeo Kitchen & Bar — Good Food, Great Mood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Custom cursor accent for pointer devices -->
+<div class="leaf-cursor" id="leafCursor" aria-hidden="true">🌿</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#home" class="logo">
+      <span class="logo-name">Verdeo</span>
+      <span class="logo-sub">Kitchen &amp; Bar</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#home" class="nav-link active" data-link>Home</a></li>
+        <li><a href="#about" class="nav-link" data-link>About Us</a></li>
+        <li><a href="#menu" class="nav-link" data-link>Menu</a></li>
+        <li><a href="#gallery" class="nav-link" data-link>Gallery</a></li>
+        <li><a href="#reservations" class="nav-link" data-link>Reservations</a></li>
+        <li><a href="#stats" class="nav-link" data-link>Blog</a></li>
+        <li><a href="#footer" class="nav-link" data-link>Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="btn btn-primary book-btn" id="bookTableBtn" type="button">
+      Book a Table
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 2v3M17 2v3M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="#home" data-link>Home</a></li>
+    <li><a href="#about" data-link>About Us</a></li>
+    <li><a href="#menu" data-link>Menu</a></li>
+    <li><a href="#gallery" data-link>Gallery</a></li>
+    <li><a href="#reservations" data-link>Reservations</a></li>
+    <li><a href="#stats" data-link>Blog</a></li>
+    <li><a href="#footer" data-link>Contact</a></li>
+  </ul>
+  <button class="btn btn-primary" id="mobileBookBtn" style="width:100%;justify-content:center;margin-top:1.5rem;">Book a Table</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="eyebrow-mark">✳</span> Good Food, Great Mood</p>
+      <h1 class="hero-title">
+        Experience Food<br>
+        That Feels Like<br>
+        <span class="script">Home</span>
+      </h1>
+      <div class="hero-rule"><span>🌿</span></div>
+      <p class="hero-desc">From fresh ingredients to unforgettable flavors, we serve meals that warm your heart and satisfy your soul.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary" data-link>
+          Explore Our Menu
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <button class="btn btn-outline" id="ourStoryBtn" type="button">
+          Our Story
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="plate-glow"></div>
+      <div class="hero-slides" id="heroSlides">
+        <img class="hero-plate active" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=1200&auto=format&fit=crop" alt="Grilled salmon with garden greens, cherry tomatoes and citrus" data-slide="0">
+        <img class="hero-plate" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop" alt="Fresh herb garnished pasta dish" data-slide="1">
+        <img class="hero-plate" src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?q=80&w=1200&auto=format&fit=crop" alt="Rustic wood-fired pizza fresh from the oven" data-slide="2">
+      </div>
+      <span class="floating-leaf leaf-a">🌿</span>
+      <span class="floating-spice">
+        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=300&auto=format&fit=crop" alt="Small bowl of cracked black pepper">
+      </span>
+    </div>
+  </div>
+
+  <div class="hero-dots" id="heroDots">
+    <button class="dot active" data-dot="0" aria-label="Slide 1"></button>
+    <button class="dot" data-dot="1" aria-label="Slide 2"></button>
+    <button class="dot" data-dot="2" aria-label="Slide 3"></button>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="about">
+  <div class="feature" data-tip="Sourced daily from trusted local farms, picked at peak freshness.">
+    <div class="feature-icon">🌱</div>
+    <h3>Fresh Ingredients</h3>
+    <p>Sourced daily from local farms</p>
+  </div>
+  <div class="feature" data-tip="Our kitchen is led by chefs who've trained across three continents.">
+    <div class="feature-icon">👨‍🍳</div>
+    <h3>Expert Chefs</h3>
+    <p>Passionate chefs crafting magic</p>
+  </div>
+  <div class="feature" data-tip="Warm lighting, soft music, and a room built for lingering.">
+    <div class="feature-icon">🍽️</div>
+    <h3>Cozy Ambience</h3>
+    <p>A perfect place to relax &amp; enjoy</p>
+  </div>
+  <div class="feature" data-tip="Flexible seating and set menus for parties of any size.">
+    <div class="feature-icon">👥</div>
+    <h3>Great for Groups</h3>
+    <p>Perfect for family and friends</p>
+  </div>
+  <div class="feature" data-tip="Rated 4.8 out of 5 across 25,000+ happy diners.">
+    <div class="feature-icon">❤️</div>
+    <h3>Happy Customers</h3>
+    <p>Your satisfaction is our priority</p>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section" id="menu">
+  <p class="eyebrow center"><span>→</span> Our Menu</p>
+  <h2 class="section-title center">Chef's Favorites</h2>
+
+  <div class="menu-filters" id="menuFilters">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="mains">Mains</button>
+    <button class="chip" data-filter="pizza">Pizza</button>
+    <button class="chip" data-filter="dessert">Dessert</button>
+  </div>
+
+  <div class="menu-grid" id="menuGrid">
+
+    <article class="menu-card" data-category="mains">
+      <div class="menu-card-img">
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=800&auto=format&fit=crop" alt="Creamy Alfredo Pasta with mushrooms and parmesan">
+        <button class="fav-btn" data-fav aria-label="Save Creamy Alfredo Pasta to favorites">♡</button>
+      </div>
+      <h3>Creamy Alfredo Pasta</h3>
+      <p>Creamy white sauce with mushrooms &amp; parmesan.</p>
+      <div class="menu-card-footer">
+        <span class="price">$13.99</span>
+        <button class="add-btn" data-add data-name="Creamy Alfredo Pasta" data-price="13.99">Add +</button>
+      </div>
+    </article>
+
+    <article class="menu-card" data-category="mains">
+      <div class="menu-card-img">
+        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=800&auto=format&fit=crop" alt="Herb Grilled Chicken with garlic mash and vegetables">
+        <button class="fav-btn" data-fav aria-label="Save Herb Grilled Chicken to favorites">♡</button>
+      </div>
+      <h3>Herb Grilled Chicken</h3>
+      <p>Served with garlic mash &amp; seasonal vegetables.</p>
+      <div class="menu-card-footer">
+        <span class="price">$15.99</span>
+        <button class="add-btn" data-add data-name="Herb Grilled Chicken" data-price="15.99">Add +</button>
+      </div>
+    </article>
+
+    <article class="menu-card" data-category="pizza">
+      <div class="menu-card-img">
+        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop" alt="Margherita Pizza with fresh mozzarella, tomato and basil">
+        <button class="fav-btn" data-fav aria-label="Save Margherita Pizza to favorites">♡</button>
+      </div>
+      <h3>Margherita Pizza</h3>
+      <p>Fresh mozzarella, tomato sauce &amp; basil.</p>
+      <div class="menu-card-footer">
+        <span class="price">$12.99</span>
+        <button class="add-btn" data-add data-name="Margherita Pizza" data-price="12.99">Add +</button>
+      </div>
+    </article>
+
+    <article class="menu-card" data-category="dessert">
+      <div class="menu-card-img">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop" alt="Chocolate Brownie with vanilla ice cream and chocolate sauce">
+        <button class="fav-btn" data-fav aria-label="Save Chocolate Brownie to favorites">♡</button>
+      </div>
+      <h3>Chocolate Brownie</h3>
+      <p>Warm brownie with vanilla ice cream &amp; chocolate sauce.</p>
+      <div class="menu-card-footer">
+        <span class="price">$7.99</span>
+        <button class="add-btn" data-add data-name="Chocolate Brownie" data-price="7.99">Add +</button>
+      </div>
+    </article>
+
+  </div>
+
+  <button class="btn btn-dark center-btn" id="viewMenuBtn" type="button">
+    View Full Menu
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</section>
+
+<!-- Cart / order tray -->
+<div class="order-tray" id="orderTray">
+  <div class="order-tray-header">
+    <strong>Your Order</strong>
+    <button id="closeTray" aria-label="Close order tray">✕</button>
+  </div>
+  <ul id="orderList" class="order-list"></ul>
+  <div class="order-total">
+    <span>Total</span>
+    <span id="orderTotal">$0.00</span>
+  </div>
+  <button class="btn btn-primary" id="orderReserveBtn" style="width:100%;justify-content:center;">Reserve a Table for this Order</button>
+</div>
+<button class="tray-toggle" id="trayToggle" aria-label="View your order">
+  🧺 <span id="trayCount">0</span>
+</button>
+
+<!-- ================= GALLERY / RESERVATION BANNER ================= -->
+<section class="reserve-banner" id="gallery">
+  <div class="reserve-banner-inner">
+    <div class="reserve-text">
+      <p class="eyebrow light"><span>🌿</span> Reserve Your Table</p>
+      <h2>Good Food Deserves<br>a Great Table</h2>
+      <p class="reserve-desc">Book your table now and enjoy a memorable dining experience with us.</p>
+      <ul class="reserve-perks">
+        <li>✔ Easy Booking</li>
+        <li>✔ No Hidden Charges</li>
+        <li>✔ Best Price Guarantee</li>
+      </ul>
+    </div>
+    <button class="btn btn-primary" id="bannerBookBtn" type="button">
+      Book a Table
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 2v3M17 2v3M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="stat" data-count="12" data-suffix="+">
+    <div class="stat-icon">🍳</div>
+    <div class="stat-num">0</div>
+    <p>Years of Experience</p>
+  </div>
+  <div class="stat" data-count="25" data-suffix="K+">
+    <div class="stat-icon">🧑‍🤝‍🧑</div>
+    <div class="stat-num">0</div>
+    <p>Happy Customers</p>
+  </div>
+  <div class="stat" data-count="150" data-suffix="+">
+    <div class="stat-icon">🍱</div>
+    <div class="stat-num">0</div>
+    <p>Delicious Dishes</p>
+  </div>
+  <div class="stat" data-count="5" data-suffix="">
+    <div class="stat-icon">📍</div>
+    <div class="stat-num">0</div>
+    <p>Locations</p>
+  </div>
+  <div class="stat" data-count="4.8" data-suffix="" data-decimal="true">
+    <div class="stat-icon">⭐</div>
+    <div class="stat-num">0</div>
+    <p>Average Rating</p>
+  </div>
+</section>
+
+<!-- RESERVATION FORM (modal) -->
+<div class="modal-overlay" id="modalOverlay"></div>
+<div class="reservation-modal" id="reservationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <button class="modal-close" id="modalClose" aria-label="Close reservation form">✕</button>
+  <p class="eyebrow"><span>🌿</span> Book a Table</p>
+  <h2 id="modalTitle">Reserve Your Spot</h2>
+  <form id="reservationForm" novalidate>
+    <div class="form-row">
+      <div class="form-field">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" required>
+        <span class="error-msg" id="err-fullName"></span>
+      </div>
+      <div class="form-field">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" required>
+        <span class="error-msg" id="err-phone"></span>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+        <span class="error-msg" id="err-date"></span>
+      </div>
+      <div class="form-field">
+        <label for="time">Time</label>
+        <select id="time" name="time" required>
+          <option value="" disabled selected>Select a time</option>
+          <option>11:00 AM</option>
+          <option>12:30 PM</option>
+          <option>2:00 PM</option>
+          <option>6:00 PM</option>
+          <option>7:30 PM</option>
+          <option>9:00 PM</option>
+        </select>
+        <span class="error-msg" id="err-time"></span>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field">
+        <label for="guests">Guests</label>
+        <div class="stepper">
+          <button type="button" id="guestMinus" aria-label="Decrease guests">−</button>
+          <input type="number" id="guests" name="guests" min="1" max="20" value="2" readonly>
+          <button type="button" id="guestPlus" aria-label="Increase guests">+</button>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="jane@email.com" required>
+        <span class="error-msg" id="err-email"></span>
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="notes">Special Requests (optional)</label>
+      <textarea id="notes" name="notes" rows="2" placeholder="Window seat, allergies, celebration..."></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+      Confirm Reservation
+    </button>
+  </form>
+  <div class="form-success" id="formSuccess">
+    <div class="success-icon">✓</div>
+    <h3>Table Reserved!</h3>
+    <p id="successMsg"></p>
+    <button class="btn btn-outline" id="successClose">Done</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo light-logo">
+        <span class="logo-name">Verdeo</span>
+        <span class="logo-sub">Kitchen &amp; Bar</span>
+      </a>
+      <p>Good food brings people together. We bring you an experience you'll always remember.</p>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home" data-link>Home</a>
+      <a href="#about" data-link>About Us</a>
+      <a href="#menu" data-link>Menu</a>
+      <a href="#gallery" data-link>Gallery</a>
+      <a href="#reservations" data-link>Reservations</a>
+      <a href="#footer" data-link>Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p>🕐 Mon – Thu: 11:00 AM – 10:00 PM</p>
+      <p>🕐 Fri – Sat: 11:00 AM – 11:30 PM</p>
+      <p>🕐 Sunday: 11:00 AM – 9:30 PM</p>
+      <p class="open-note">We are open all days</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p>📞 +1 234 567 8900</p>
+      <p>✉️ hello@verdeokitchen.com</p>
+      <p>📍 789 Greenway Street, New York, NY 10001</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Verdeo Kitchen &amp; Bar. All rights reserved.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
